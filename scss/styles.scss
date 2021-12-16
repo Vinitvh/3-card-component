@@ -30,43 +30,67 @@ body {
   font-size: 2rem;
   text-transform: uppercase;
   font-family: "Big Shoulders Display", cursive;
+  font-weight: 700;
   color: $theme;
 }
 
 @mixin paragraph($theme) {
   font-size: 15px;
   font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
   color: $theme;
+  margin-bottom: 3rem;
 }
 
 @mixin button($theme) {
-  padding: 5px 10px;
+  padding: 9px 16px;
   background-color: $transparent-white;
+  border: 2px solid $theme;
+  border-radius: 20px;
   color: $theme;
+  transition: all 0.3s ease-in-out;
+
+  & a {
+    font-size: 15px;
+    text-transform: capitalize;
+    text-decoration: none;
+    color: $theme;
+  }
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0);
+    border: 2px solid $transparent-white;
+    // cursor: pointer;
+    // background-color: aqua;
+  }
+
+  &:hover a {
+    color: $transparent-white;
+  }
 }
 
 // Card component
 
 .container {
   width: 60vw;
-  height: 350px;
+  height: 63vh;
   background-color: beige;
 
   .card-grid {
     height: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    flex-direction: row;
 
     .card {
       padding: 2rem 2rem;
 
       &-body {
         .card-title {
-          @include title($theme: hsla(0, 0%, 100%, 0.75));
+          @include title($theme: hsl(0, 0%, 95%));
         }
 
         .card-text {
-          @include paragraph($theme: hsl(0, 0%, 95%));
+          @include paragraph($theme: hsla(0, 0%, 100%, 0.75));
         }
       }
     }
@@ -85,6 +109,30 @@ body {
 
     .card:nth-child(3) {
       background-color: $very-dark-cyan;
+    }
+
+    .sedan .card-body .card-btn {
+      @include button(hsl(31, 77%, 52%));
+    }
+
+    .suv .card-body .card-btn {
+      @include button(hsl(184, 100%, 22%));
+    }
+
+    .luxury .card-body .card-btn {
+      @include button(hsl(179, 100%, 13%));
+    }
+  }
+}
+
+@media screen and (min-width: 375px) and (max-width: 748px) {
+  .container {
+    width: 60vw;
+    height: 30vh;
+
+    .card-grid {
+      display: flex;
+      flex-direction: column;
     }
   }
 }
