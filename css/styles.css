@@ -11,6 +11,44 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #f2f2f2;
+}
+
+.container {
+  width: 60vw;
+  height: 350px;
+  background-color: beige;
+}
+.container .card-grid {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.container .card-grid .card {
+  padding: 2rem 2rem;
+}
+.container .card-grid .card-body .card-title {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-family: "Big Shoulders Display", cursive;
+  color: rgba(255, 255, 255, 0.75);
+}
+.container .card-grid .card-body .card-text {
+  font-size: 15px;
+  font-family: "Lexend Deca", sans-serif;
+  color: #f2f2f2;
+}
+.container .card-grid .card:first-child {
+  background-color: #e38826;
+}
+.container .card-grid .card .card-body .card-btn:first-child {
+  color: #f2f2f2;
+}
+.container .card-grid .card:nth-child(2) {
+  background-color: #006970;
+}
+.container .card-grid .card:nth-child(3) {
+  background-color: #004241;
 }
 
 /*# sourceMappingURL=styles.css.map */

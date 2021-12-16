@@ -21,4 +21,70 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: $very-light-gray;
+}
+
+// Mixins
+
+@mixin title($theme) {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-family: "Big Shoulders Display", cursive;
+  color: $theme;
+}
+
+@mixin paragraph($theme) {
+  font-size: 15px;
+  font-family: "Lexend Deca", sans-serif;
+  color: $theme;
+}
+
+@mixin button($theme) {
+  padding: 5px 10px;
+  background-color: $transparent-white;
+  color: $theme;
+}
+
+// Card component
+
+.container {
+  width: 60vw;
+  height: 350px;
+  background-color: beige;
+
+  .card-grid {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    .card {
+      padding: 2rem 2rem;
+
+      &-body {
+        .card-title {
+          @include title($theme: hsla(0, 0%, 100%, 0.75));
+        }
+
+        .card-text {
+          @include paragraph($theme: hsl(0, 0%, 95%));
+        }
+      }
+    }
+
+    .card:first-child {
+      background-color: $bright-orange;
+    }
+
+    .card .card-body .card-btn:first-child {
+      color: $very-light-gray;
+    }
+
+    .card:nth-child(2) {
+      background-color: $dark-cyan;
+    }
+
+    .card:nth-child(3) {
+      background-color: $very-dark-cyan;
+    }
+  }
 }
