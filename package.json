@@ -1,0 +1,29 @@
+{
+  "name": "3-column-preview-card-component-main",
+  "version": "1.0.0",
+  "description": "Card component design for Frontend mentor challenge",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch scss/styles.scss css/styles.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vinitvh/3-card-component.git"
+  },
+  "keywords": [
+    "flexbox",
+    "sass",
+    "grid",
+    "css",
+    "html"
+  ],
+  "author": "Vinitvh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Vinitvh/3-card-component/issues"
+  },
+  "homepage": "https://github.com/Vinitvh/3-card-component#readme",
+  "devDependencies": {
+    "sass": "^1.45.0"
+  }
+}
