@@ -25,8 +25,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [netlify](https://3-card-component-main.netlify.app/)
 
 ## My process
 
@@ -60,7 +59,6 @@ Though I like using SASS, still not to structure it properly. Will learn more an
 
 ## Author
 
--GitHub - [@Vinitvh](https://github.com/Vinitvh)
-
+- GitHub - [@Vinitvh](https://github.com/Vinitvh)
 - Frontend Mentor - [@Vinitvh](https://www.frontendmentor.io/profile/vinitvh)
 - Twitter - [@vinitvh009](https://www.twitter.com/vinitvh009)
