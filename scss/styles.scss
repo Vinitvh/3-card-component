@@ -73,13 +73,14 @@ body {
 
 .container {
   width: 60vw;
-  height: 63vh;
+  height: auto;
   background-color: beige;
 
   .card-grid {
     height: 100%;
     display: flex;
     flex-direction: row;
+    flex: 1;
 
     .card {
       padding: 2rem 2rem;
@@ -126,9 +127,14 @@ body {
 }
 
 @media screen and (min-width: 375px) and (max-width: 748px) {
+  body {
+    align-items: flex-start;
+  }
+
   .container {
     width: 60vw;
     height: 30vh;
+    margin: 3rem auto 3rem auto;
 
     .card-grid {
       display: flex;
